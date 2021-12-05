@@ -62,6 +62,33 @@ Medium: 11px
   box-sizing: border-box;
 }
 
+html {
+  /*
+  Default font-size for app should be implemented here in html. 
+  So that using "rem" throughout the app will respond to this default size.
+
+  "rem" unit (standing for “root em”), provides a way to specify lengths 
+  as fractions of the root element’s font size. 
+  In practical terms, this almost always means the font size of the <html> element. 
+
+  We want font-size: 10px for 1rem = 10px
+  that means 2rem = 20px and so on.
+
+  But, if someone changes their browser font-size 
+  then using px won't work. Instead, use percentages.
+
+  The default font-size for most browsers is 16px.
+  example: 1rem = 16px, 2rem = 32px.
+
+  But we want 10px as the default since it is easier to use,
+  while also allowing the user to change this in their browser
+  so using percentages makes sense.
+
+  To use percentage: 10px / 16px = 0.625 = 62.5%
+  */
+  font-size: 62.5%;
+}
+
 body {
   font-family: sans-serif;
   line-height: 1;
